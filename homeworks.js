@@ -23,4 +23,8 @@ console.log(mathMult);
 const mathDivision = firstNumber / secondNumber;
 console.log(mathDivision);
 
+//exponentiation
+const mathExp = firstNumber ** secondNumber;
+console.log(mathExp);
+
 //////////////////////////////////
