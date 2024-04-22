@@ -17,10 +17,6 @@ console.log(iterativeOddSumTo(1)) // 1
 console.log(iterativeOddSumTo(9)) // 25
 console.log(iterativeOddSumTo(10)) // 25
 
-   
-
-
-
 
 //2. Задача про рекурсію
 function recursiveOddSumTo(number) {
@@ -37,34 +33,20 @@ console.log(recursiveOddSumTo(1)) // 1
 console.log(recursiveOddSumTo(9)) // 25
 console.log(recursiveOddSumTo(10)) // 25
 
-    // //chatGPT solution
-    // function recursiveOddSumTo(number, currentSum = 0) {
-    //     if (number <= 0) {
-    //         return currentSum;
-    //     } else {
-    //         if (number % 2 !== 0) {
-    //             currentSum += number;
-    //         }
-    //         return recursiveOddSumTo(number - 1, currentSum);
-    //     }
-    // }
-    
-
     
 //3. Додаткова задача*
 
 const isXOEqual = (str) => {
     str = str.toLowerCase();
-    arr = str.split('');
-    countSymbolOne = arr.filter(x => x ==='x').length;
-    countSymbolTwo = arr.filter(x => x ==='o').length;
+    let arr = str.split('');
+    let countSymbolOne = arr.filter(x => x ==='x').length;
+    let countSymbolTwo = arr.filter(x => x ==='o').length;
    if (countSymbolOne === countSymbolTwo) {
     return true;
    } else {
     return false;
    }
 };
-
 
 
 console.log(isXOEqual("ooxx")) // true
@@ -77,9 +59,9 @@ console.log(isXOEqual("zzoo")) // false
 //improvement
 const isSymbolsEqual = (str, symbolOne, symbolTwo) => {
     str = str.toLowerCase();
-    arr = str.split('');
-    countSymbolOne = arr.filter(x => x === String(symbolOne)).length;
-    countSymbolTwo = arr.filter(x => x === String(symbolTwo)).length;
+    let arr = str.split('');
+    let countSymbolOne = arr.filter(x => x === String(symbolOne)).length;
+    let countSymbolTwo = arr.filter(x => x === String(symbolTwo)).length;
    if (countSymbolOne === countSymbolTwo) {
     return true;
    } else {
@@ -92,6 +74,3 @@ console.log(isSymbolsEqual("xooxx",'x', 'o')) // false
 console.log(isSymbolsEqual("ooxXm",'x', 'o')) // true
 console.log(isSymbolsEqual("zpzpzpp",'x', 'o')) // коли немає 'x' та 'o' то має повертати true бо 0 = 0
 console.log(isSymbolsEqual("zzoo",'x', 'o')) // false
-
-
-//////////////////////////////////
