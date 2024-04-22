@@ -57,11 +57,8 @@ for (let i = 1; i <= 100; i++) {
 //3. Додаткова задача*
 
 let string = '42559125';
-let result = '';
 
 let arr = string.split('').map(Number);
-console.log(arr);
-console.log(arr.length);
 
 for (let i = 0; i < arr.length; i++) {
     if (arr[i] < 5) {
@@ -71,4 +68,5 @@ for (let i = 0; i < arr.length; i++) {
     };
 };
 
-console.log(arr);
+let result = arr.toString();
+console.log(result);
