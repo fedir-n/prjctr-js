@@ -1,45 +1,37 @@
+'use strict';
+
 // HOMEWORK 2
 
 //1. Вивід парних чисел
 
 //ask a number
-let promptNumber = Number (prompt ('Enter a number'));
+let promptNumber = prompt ('Enter a number');
 
 //display entered value
 console.log(`Entered value: ${promptNumber}`);
 
+//convert promptNumber to Number
+promptNumber = Number (promptNumber);
+
 //determination of a type of the entered character
 if (promptNumber){
 
-    //ask to select loop type
-    let promptLoop = Number (prompt ('Enter 1 for "for loop" or 2 for "while loop"'));
-
     //for loop 
-    if (promptLoop === 1){
-        console.log(`"for loop" selected`);
-
-        for (let i = promptNumber; i > 0; i--) {
-            if (i % 2 === 0){
-            console.log(i);
-            };
-         };
-    
-    //while loop
-    } else if (promptLoop === 2) {
-        console.log(`"while loop" selected`);
-
-        let i = promptNumber
-        while (i > 0) {
-            if (i % 2 === 0){
-                console.log(i);
-             };
-        i--;
+    for (let i = promptNumber; i > 0; i--) {
+        if (i % 2 === 0){
+        console.log(i);
         };
-
-    } else {
-        console.log(`Enter an allowed value!`);
     };
 
+    //while loop
+    let i = promptNumber
+    while (i > 0) {
+        if (i % 2 === 0){
+        console.log(i);
+        };
+        i--;
+    };
+    
 } else if (promptNumber === 0){
     console.log(`Enter a number greater than 0 !`);
 } else {
