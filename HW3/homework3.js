@@ -7,7 +7,7 @@ function iterativeOddSumTo(number) {
     let mathOddSum = 0;   
     for (let i = number; i > 0; i--) {
         if (i % 2) {
-        mathOddSum += i
+        mathOddSum += i;
         };
     };
     return mathOddSum;
