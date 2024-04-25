@@ -1,30 +1,32 @@
-'use strict';
+// 'use strict';
 
-//////////////////////////////////
-// HOMEWORK 1
+// //////////////////////////////////
+// // HOMEWORK 1
 
-//set numbers
-let firstNumber = 2;
-let secondNumber = 5;
+// //set numbers
+// let firstNumber = 2;
+// let secondNumber = 5;
 
-//addition
-const mathAddition = firstNumber + secondNumber;
-console.log(mathAddition);
+// //addition
+// const mathAddition = firstNumber + secondNumber;
+// console.log(mathAddition);
 
-//substraction
-const mathSubstraction = firstNumber - secondNumber;
-console.log(mathSubstraction);
+// //substraction
+// const mathSubstraction = firstNumber - secondNumber;
+// console.log(mathSubstraction);
 
-//multiplication
-const mathMult = firstNumber * secondNumber;
-console.log(mathMult);
+// //multiplication
+// const mathMult = firstNumber * secondNumber;
+// console.log(mathMult);
 
-//division
-const mathDivision = firstNumber / secondNumber;
-console.log(mathDivision);
+// //division
+// const mathDivision = firstNumber / secondNumber;
+// console.log(mathDivision);
 
-//exponentiation
-const mathExp = firstNumber ** secondNumber;
-console.log(mathExp);
+// //exponentiation
+// const mathExp = firstNumber ** secondNumber;
+// console.log(mathExp);
 
-//////////////////////////////////
+// //////////////////////////////////
+let arr = [1, 5, 1000, 12]
+console.log(arr.sort())
