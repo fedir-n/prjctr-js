@@ -41,11 +41,7 @@ const isXOEqual = (str) => {
     let arr = str.split('');
     let countSymbolOne = arr.filter(x => x ==='x').length;
     let countSymbolTwo = arr.filter(x => x ==='o').length;
-   if (countSymbolOne === countSymbolTwo) {
-    return true;
-   } else {
-    return false;
-   }
+return countSymbolOne === countSymbolTwo;
 };
 
 
