@@ -37,7 +37,7 @@ console.log(recursiveOddSumTo(10)) // 25
 //3. Додаткова задача*
 
 const isXOEqual = (str) => {
-    strLow = str.toLowerCase();
+    const strLow = str.toLowerCase();
     const arr = strLow.split('');
     const countSymbolOne = arr.filter(x => x ==='x').length;
     const countSymbolTwo = arr.filter(x => x ==='o').length;
@@ -54,15 +54,11 @@ console.log(isXOEqual("zzoo")) // false
 
 //improvement
 const isSymbolsEqual = (str, symbolOne, symbolTwo) => {
-    str = str.toLowerCase();
-    let arr = str.split('');
-    let countSymbolOne = arr.filter(x => x === String(symbolOne)).length;
-    let countSymbolTwo = arr.filter(x => x === String(symbolTwo)).length;
-   if (countSymbolOne === countSymbolTwo) {
-    return true;
-   } else {
-    return false;
-   }
+    const strLow = str.toLowerCase();
+    const arr = strLow.split('');
+    const countSymbolOne = arr.filter(x => x === String(symbolOne)).length;
+    const countSymbolTwo = arr.filter(x => x === String(symbolTwo)).length;
+return countSymbolOne === countSymbolTwo;
 };
 
 console.log(isSymbolsEqual("ooxx",'x', 'o')) // true
