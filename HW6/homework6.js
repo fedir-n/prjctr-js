@@ -8,7 +8,7 @@ console.log(addThemAll(1,2,3,4)); // 10
 console.log(addThemAll(5,5,10)); // 20
 
 function addThemAll (...args) {
-  return args.slice().reduce((a, b) => a + b);
+  return args.reduce((a, b) => a + b);
 };
 
 // 2. Задача на використання замикання. 
