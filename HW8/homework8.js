@@ -2,51 +2,51 @@
 
 //HOMEWORK8
 
-// //1. Напишіть функцію яка буде використовуватись для сортування масиву фільмів
+//1. Напишіть функцію яка буде використовуватись для сортування масиву фільмів
 
-// const movies = [
-// 	{
-// 		movieName: 'The Thing',
-// 		releaseYear: 1982,
-// 		directedBy: 'Carpenter',
-// 		runningTimeInMinutes: 109,
-// 	},
-// 	{
-// 		movieName: 'Aliens',
-// 		releaseYear: 1986,
-// 		directedBy: 'Cameron',
-// 		runningTimeInMinutes: 137,
-// 	},
-// 	{
-// 		movieName: 'Men in Black',
-// 		releaseYear: 1997,
-// 		directedBy: 'Sonnenfeld',
-// 		runningTimeInMinutes: 98,
-// 	},
-// 	{
-// 		movieName: 'Predator',
-// 		releaseYear: 1987,
-// 		directedBy: 'McTiernan',
-// 		runningTimeInMinutes: 107,
-// 	},
-// ];
+const movies = [
+	{
+		movieName: 'The Thing',
+		releaseYear: 1982,
+		directedBy: 'Carpenter',
+		runningTimeInMinutes: 109,
+	},
+	{
+		movieName: 'Aliens',
+		releaseYear: 1986,
+		directedBy: 'Cameron',
+		runningTimeInMinutes: 137,
+	},
+	{
+		movieName: 'Men in Black',
+		releaseYear: 1997,
+		directedBy: 'Sonnenfeld',
+		runningTimeInMinutes: 98,
+	},
+	{
+		movieName: 'Predator',
+		releaseYear: 1987,
+		directedBy: 'McTiernan',
+		runningTimeInMinutes: 107,
+	},
+];
 
-// console.log('ЗА РОКОМ ВИПУСКУ (спочатку старі):', [...movies].sort(byProperty('releaseYear', '>'))); 
-// // виведе масив фільмів посортованих по року випуску, від старішого до новішого
-// console.log('ЗА ТРИВАЛІСТЮ (спочатку найдовші):', [...movies].sort(byProperty('runningTimeInMinutes', '<'))); 
-// // виведе масив фільмів посортованих по їх тривалості, від найдовшого до найкоротшого
-// console.log('ЗА НАЗВОЮ (алфавіт):', [...movies].sort(byProperty('movieName', '>'))); 
-// // виведе масив фільмів посортованих по назві, в алфавітному порядку
+console.log('ЗА РОКОМ ВИПУСКУ (спочатку старі):', [...movies].sort(byProperty('releaseYear', '>'))); 
+// виведе масив фільмів посортованих по року випуску, від старішого до новішого
+console.log('ЗА ТРИВАЛІСТЮ (спочатку найдовші):', [...movies].sort(byProperty('runningTimeInMinutes', '<'))); 
+// виведе масив фільмів посортованих по їх тривалості, від найдовшого до найкоротшого
+console.log('ЗА НАЗВОЮ (алфавіт):', [...movies].sort(byProperty('movieName', '>'))); 
+// виведе масив фільмів посортованих по назві, в алфавітному порядку
 
-// function byProperty(property, direction = 0) {
-//   if (direction === '>'){
-//     return (a, b) => a[property] > b[property] ? 1 : -1;
-//   } else if (direction === '<') {
-//     return (a, b) => a[property] < b[property] ? 1 : -1;
-//   } else {
-//     return 0; 
-//   };
-// };
+function byProperty(property, direction = 0) {
+  if (direction === '>'){
+    return (a, b) => a[property] > b[property] ? 1 : -1;
+  } else if (direction === '<') {
+    return (a, b) => a[property] < b[property] ? 1 : -1;
+  } else {
+    return 0; 
+  };
+};
 
 //2. Напишіть функцію-декоратор яка вповільнює виконання довільної функції на вказану кількість секунд.
 function someFunction (...args) {
