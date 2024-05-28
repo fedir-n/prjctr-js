@@ -38,13 +38,11 @@ console.log('ЗА ТРИВАЛІСТЮ (спочатку найдовші):', [.
 console.log('ЗА НАЗВОЮ (алфавіт):', [...movies].sort(byProperty('movieName', '>'))); 
 // виведе масив фільмів посортованих по назві, в алфавітному порядку
 
-function byProperty(property, direction = 0) {
+function byProperty(property, direction) {
   if (direction === '>'){
     return (a, b) => a[property] > b[property] ? 1 : -1;
   } else if (direction === '<') {
     return (a, b) => a[property] < b[property] ? 1 : -1;
-  } else {
-    return 0; 
   };
 };
 
