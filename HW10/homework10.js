@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   button.addEventListener('click', changeElements);
   
-  let isTurnedOn = (localStorage.getItem('isTurnedOn') === 'true') ? true : false;
+  let isTurnedOn = (localStorage.getItem('isTurnedOn') !== 'false') ? true : false;
 
   uploadCurrentVersion();
 
