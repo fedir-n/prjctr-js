@@ -4,7 +4,7 @@ const taskInput = document.querySelector('.task-input');
 const tasksList = document.querySelector('.collection');
 const clearAllBtn = document.querySelector('.clear-tasks');
 const form = document.querySelector('.create-task-form');
-let taskId = 0;
+const search = document.querySelector('.filter-input');
 
 //завантаження інформації при завантаженні сторінки
 document.addEventListener('DOMContentLoaded', updateTasksList);
@@ -29,7 +29,7 @@ form.addEventListener('submit', (event) => {
         return;
     }
 
-    ++taskId;
+    const taskId = Date.now();
     const task = {
         id: taskId,
         task: taskInput.value
@@ -89,12 +89,12 @@ tasksList.addEventListener('click', function(event) {
     const taskId = parseInt(task.dataset.id);
     const tasks = localStorage.getItem('tasks') !== null
         ? JSON.parse(localStorage.getItem('tasks')) : [];
-
+    //видалення
     if (event.target.closest('.delete-item')) {
         tasksList.removeChild(task);
         const updatedTasks = tasks.filter(task => task.id !== taskId)
         localStorage.setItem('tasks', JSON.stringify(updatedTasks));
-
+    //редагування
     } else if (event.target.closest('.edit-item')) {
         let editedTask = prompt('Редагування завдання', task.textContent);
         if (editedTask === null || editedTask.trim() === '') {
@@ -108,4 +108,19 @@ tasksList.addEventListener('click', function(event) {
         };
     }   
 });
+ 
+//пошук
+search.addEventListener('input', findTasks);
+function findTasks(){
+    let tasks = tasksList.querySelectorAll('li');
+    for (let i = 0; i < tasks.length; i++) {
+        if (tasks[i].childNodes[1].nodeValue.indexOf(search.value) > -1) {
+            tasks[i].style.display = '';
+        } else {
+            tasks[i].style.display = 'none';
+        }
+    };
+};
+
+
 
