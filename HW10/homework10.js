@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function uploadCurrentVersion () {
     changeBackground();
     changeButtonText();
-    setTime ();
+    setTime();
   };
 
   function changeElements () {
