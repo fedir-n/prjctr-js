@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
   const text = document.querySelector('.text');
 
-  let isTurnedOn = (localStorage.getItem('isTurnedOn') !== 'false') ? true : false;
+  let isTurnedOn = !!localStorage.getItem('isTurnedOn');
 
   button.addEventListener('click', changeElements);
   
