@@ -23,3 +23,7 @@
     font-size: 20px;
     color: rgb(21, 14, 14);
 }
+
+.dark-background {
+    background-color:rgb(21, 14, 14)
+}

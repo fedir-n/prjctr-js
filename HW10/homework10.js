@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.querySelector('body');
   const text = document.querySelector('.text');
 
-  let isTurnedOn = !!localStorage.getItem('isTurnedOn');
+  let isTurnedOn = (localStorage.getItem('isTurnedOn') !== 'false') ? true : false;
 
   button.addEventListener('click', changeElements);
   
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
   } 
 
   function changeBackground () {
-    isTurnedOn ? body.style.backgroundColor = 'rgb(255, 255, 255)': body.style.backgroundColor = 'rgb(21, 14, 14)';
+    body.classList.toggle('dark-background', !isTurnedOn);
   };
 
   function changeButtonText () {
