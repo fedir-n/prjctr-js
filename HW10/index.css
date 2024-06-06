@@ -1,0 +1,29 @@
+.base {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(255, 255, 255)
+}
+.center {
+    text-align: center;
+}
+.btn {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.text {
+    font-size: 20px;
+    color: rgb(21, 14, 14);
+}
+
+.dark-background {
+    background-color:rgb(21, 14, 14)
+}
